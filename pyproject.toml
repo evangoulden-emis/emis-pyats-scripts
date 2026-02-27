@@ -1,0 +1,12 @@
+[project]
+name = "network-snapshot"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "napalm>=5.1.0",
+    "netmiko>=4.6.0",
+    "nornir>=3.5.0",
+    "pyats>=26.1",
+    "requests>=2.32.5",
+]
