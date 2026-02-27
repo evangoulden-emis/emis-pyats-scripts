@@ -1,25 +1,26 @@
 from pyats.topology import loader
 
 def check_connectivity(testbed_file):
-    # Load the testbed file
-    testbed = loader.load(testbed_file)
+    # Load your testbed
+    testbed = loader.load('testbed.yaml')
 
     print(f"--- Starting Connectivity Check for Testbed: {testbed.name} ---")
 
-    # Connect to all devices in parallel for efficiency
-    # Note: Replace log_stdout=True with False if you want a cleaner output
-    testbed.connect(log_stdout=False, learn_hostname=True)
-
-    print("\n--- Summary ---")
     for device_name, device in testbed.devices.items():
-        if device.connected:
-            print(f"✅ {device_name:30} | Connected")
-        else:
-            print(f"❌ {device_name:30} | FAILED")
+        try:
+            print(f"Connecting to {device_name}...")
+            # Individual connection call
+            device.connect()
+            print(f"Successfully connected to {device_name}")
 
-    # Disconnect from all devices
-    testbed.disconnect()
+            # Optional: Run a command to verify
+            # print(device.execute('show version'))
 
+            device.disconnect()
+        except Exception as e:
+            print(f"Failed to connect to {device_name}: {e}")
+
+    print("--- Connectivity Check Complete ---")
 
 if __name__ == "__main__":
     # Ensure your testbed file is named 'testbed.yaml' or update the path below
