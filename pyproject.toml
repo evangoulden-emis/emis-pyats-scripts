@@ -7,6 +7,7 @@ dependencies = [
     "napalm>=5.1.0",
     "netmiko>=4.6.0",
     "nornir>=3.5.0",
-    "pyats>=26.1",
+    "pyats[full]>=26.1",
     "requests>=2.32.5",
+    "unicon>=26.1.1",
 ]

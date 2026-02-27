@@ -1,6 +1,5 @@
 from pyats.topology import loader
 
-
 def check_connectivity(testbed_file):
     # Load the testbed file
     testbed = loader.load(testbed_file)
@@ -24,4 +23,4 @@ def check_connectivity(testbed_file):
 
 if __name__ == "__main__":
     # Ensure your testbed file is named 'testbed.yaml' or update the path below
-    check_connectivity('testbed/emis-testbed.yaml')
+    check_connectivity('/Users/evan.goulden@optum.com/Library/CloudStorage/OneDrive-UHG/Code/pyATS/network-snapshot/testbed/emis-testbed.yaml')

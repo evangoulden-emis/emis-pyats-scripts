@@ -8,14 +8,24 @@ aiohttp==3.13.3
     # via pyats-log
 aiosignal==1.4.0
     # via aiohttp
+arrow==1.4.0
+    # via cookiecutter
 async-lru==2.2.0
     # via pyats-log
+asyncssh==2.22.0
+    # via genie-libs-filetransferutils
 attrs==25.4.0
     # via aiohttp
+backports-ssl==0.0.9
+    # via ixnetwork
+backports-ssl-match-hostname==3.7.0.1
+    # via ixnetwork
 bcrypt==5.0.0
     # via paramiko
 bidict==0.23.1
     # via python-socketio
+binaryornot==0.4.4
+    # via cookiecutter
 certifi==2026.2.25
     # via requests
 cffi==2.0.0
@@ -24,45 +34,107 @@ cffi==2.0.0
     #   napalm
     #   pynacl
 chardet==4.0.0
-    # via pyats-log
+    # via
+    #   binaryornot
+    #   pyats-log
 charset-normalizer==3.4.4
     # via requests
+ciscoisesdk==0.1.1
+    # via rest-connector
+click==8.3.1
+    # via cookiecutter
+cookiecutter==2.6.0
+    # via pyats
+coverage==7.13.4
+    # via pytest-cov
 cryptography==46.0.5
     # via
+    #   asyncssh
     #   paramiko
     #   pyats-utils
+    #   pyopenssl
+    #   pysnmpcrypto
     #   unicon-plugins
+dict2xml==1.7.8
+    # via rest-connector
 dill==0.4.1
-    # via unicon
+    # via
+    #   genie
+    #   unicon
 distro==1.9.0
     # via
     #   pyats-easypy
     #   pyats-kleenex
     #   pyats-utils
+f5-icontrol-rest==1.3.13
+    # via rest-connector
+fastjsonschema==2.21.2
+    # via ciscoisesdk
 frozenlist==1.8.0
     # via
     #   aiohttp
     #   aiosignal
+future==0.18.3
+    # via ciscoisesdk
+genie==26.1
+    # via
+    #   genie-libs-clean
+    #   genie-libs-health
+    #   genie-telemetry
+    #   genie-trafficgen
+    #   pyats
+genie-libs-clean==26.1
+    # via genie
+genie-libs-conf==26.1
+    # via genie
+genie-libs-filetransferutils==26.1
+    # via genie
+genie-libs-health==26.1
+    # via genie
+genie-libs-ops==26.1
+    # via genie
+genie-libs-parser==26.1
+    # via genie
+genie-libs-robot==26.1
+    # via pyats
+genie-libs-sdk==26.1
+    # via genie
+genie-telemetry==26.1
+    # via pyats
+genie-trafficgen==26.1
+    # via pyats
 gitdb==4.0.12
     # via gitpython
 gitpython==3.1.46
     # via pyats-reporter
+grpcio==1.78.0
+    # via yang-connector
 h11==0.16.0
     # via wsproto
 idna==3.11
     # via
     #   requests
     #   yarl
+iniconfig==2.3.0
+    # via pytest
 invoke==2.2.1
     # via paramiko
+ixnetwork==9.30.2212.8
+    # via genie-trafficgen
+ixnetwork-restpy==1.9.0
+    # via genie-trafficgen
 jinja2==3.1.6
     # via
+    #   cookiecutter
     #   junos-eznc
     #   napalm
     #   pyats-aereport
     #   pyats-aetest
     #   pyats-easypy
     #   pyats-log
+    #   pysmi
+jsonpickle==4.1.1
+    # via genie
 junit-xml==1.9
     # via pyats-aereport
 junos-eznc==2.7.6
@@ -72,6 +144,7 @@ lxml==6.0.2
     #   junos-eznc
     #   napalm
     #   ncclient
+    #   yang-connector
 markdown-it-py==4.0.0
     # via rich
 markupsafe==3.0.3
@@ -88,8 +161,10 @@ ncclient==0.7.0
     # via
     #   junos-eznc
     #   napalm
+    #   yang-connector
 netaddr==1.3.0
     # via
+    #   genie
     #   napalm
     #   pyeapi
 netmiko==4.6.0
@@ -103,7 +178,11 @@ nornir==3.5.0
 ntc-templates==9.0.0
     # via netmiko
 packaging==26.0
-    # via pyats
+    # via
+    #   ixnetwork-restpy
+    #   pyats
+    #   pytest
+    #   wheel
 paramiko==4.0.0
     # via
     #   junos-eznc
@@ -111,22 +190,41 @@ paramiko==4.0.0
     #   ncclient
     #   netmiko
     #   scp
+    #   yang-connector
 pathspec==0.12.1
     # via
     #   pyats-topology
     #   yamllint
+pluggy==1.6.0
+    # via pytest
+ply==3.11
+    # via pysmi
 prettytable==3.17.0
     # via
+    #   genie
+    #   genie-trafficgen
     #   pyats-aetest
     #   unicon-plugins
 propcache==0.4.1
     # via
     #   aiohttp
     #   yarl
+protobuf==7.34.0
+    # via yang-connector
 psutil==7.2.2
     # via
     #   pyats-aereport
     #   pyats-easypy
+pyasn1==0.6.0
+    # via
+    #   genie-libs-sdk
+    #   pysnmp
+pyasynchat==1.0.5
+    # via pyftpdlib
+pyasyncore==1.0.5
+    # via
+    #   pyasynchat
+    #   pyftpdlib
 pyats==26.1
     # via network-snapshot (pyproject.toml)
 pyats-aereport==26.1
@@ -139,6 +237,7 @@ pyats-aetest==26.1
     # via
     #   pyats
     #   pyats-kleenex
+    #   pyats-robot
 pyats-async==26.1
     # via
     #   pyats
@@ -147,7 +246,10 @@ pyats-async==26.1
 pyats-connections==26.1
     # via
     #   pyats
+    #   pyats-robot
     #   pyats-topology
+pyats-contrib==26.1
+    # via pyats
 pyats-datastructures==26.1
     # via
     #   pyats
@@ -184,6 +286,8 @@ pyats-results==26.1
     #   pyats-aetest
     #   pyats-easypy
     #   pyats-reporter
+pyats-robot==26.1
+    # via pyats
 pyats-tcl==26.1
     # via pyats
 pyats-topology==26.1
@@ -204,24 +308,47 @@ pycparser==3.0
     # via cffi
 pyeapi==1.0.4
     # via napalm
+pyftpdlib==2.2.0
+    # via genie-libs-filetransferutils
 pygments==2.19.2
-    # via rich
+    # via
+    #   pytest
+    #   rich
 pynacl==1.6.2
     # via paramiko
+pyopenssl==25.3.0
+    # via ixnetwork
 pyparsing==3.3.2
     # via junos-eznc
 pyserial==3.5
     # via
     #   junos-eznc
     #   netmiko
+pysmi==1.6.3
+    # via pysnmp
+pysnmp==6.1.4
+    # via genie-libs-sdk
+pysnmpcrypto==0.0.4
+    # via pysnmp
+pytest==9.0.2
+    # via pytest-cov
+pytest-cov==4.1.0
+    # via pysnmp
+python-dateutil==2.9.0.post0
+    # via arrow
 python-engineio==4.9.1
     # via
     #   pyats-log
     #   python-socketio
+python-slugify==8.0.4
+    # via cookiecutter
 python-socketio==5.11.2
     # via pyats-log
+pyvmomi==9.0.0.0
+    # via genie-libs-sdk
 pyyaml==6.0.3
     # via
+    #   cookiecutter
     #   junos-eznc
     #   napalm
     #   netmiko
@@ -236,20 +363,49 @@ pyyaml==6.0.3
 requests==2.32.5
     # via
     #   network-snapshot (pyproject.toml)
+    #   ciscoisesdk
+    #   cookiecutter
+    #   f5-icontrol-rest
+    #   ixnetwork
+    #   ixnetwork-restpy
     #   napalm
+    #   pyats-contrib
     #   pyats-kleenex
+    #   pysmi
+    #   requests-toolbelt
+    #   rest-connector
+    #   stcrestclient
+requests-toolbelt==0.9.1
+    # via
+    #   ciscoisesdk
+    #   pyats-contrib
+rest-connector==26.1
+    # via genie-libs-sdk
 rich==14.3.3
-    # via netmiko
+    # via
+    #   cookiecutter
+    #   netmiko
+robotframework==7.4.1
+    # via
+    #   genie-libs-robot
+    #   pyats-robot
 ruamel-yaml==0.19.1
     # via
+    #   genie-libs-sdk
     #   netmiko
     #   nornir
+ruamel-yaml-clib==0.2.14
+    # via genie-libs-sdk
 scp==0.15.0
     # via
     #   junos-eznc
     #   netmiko
 setuptools==79.0.1
     # via
+    #   genie-libs-clean
+    #   genie-libs-health
+    #   genie-trafficgen
+    #   ixnetwork-restpy
     #   napalm
     #   nornir
     #   pyats-easypy
@@ -259,14 +415,23 @@ six==1.17.0
     # via
     #   junit-xml
     #   junos-eznc
+    #   python-dateutil
     #   transitions
 smmap==5.0.2
     # via gitdb
+stcrestclient==1.9.4
+    # via genie-trafficgen
+text-unidecode==1.3
+    # via python-slugify
 textfsm==2.1.0
     # via
     #   napalm
     #   netmiko
     #   ntc-templates
+tftpy==0.8.0
+    # via genie-libs-filetransferutils
+tqdm==4.67.3
+    # via genie
 transitions==0.9.3
     # via junos-eznc
 ttp==0.10.0
@@ -276,9 +441,17 @@ ttp==0.10.0
 ttp-templates==0.3.7
     # via napalm
 typing-extensions==4.15.0
-    # via napalm
+    # via
+    #   asyncssh
+    #   grpcio
+    #   napalm
+tzdata==2025.3
+    # via arrow
 unicon==26.1.1
     # via
+    #   network-snapshot (pyproject.toml)
+    #   genie-libs-filetransferutils
+    #   genie-trafficgen
     #   pyats-connections
     #   unicon-plugins
 unicon-plugins==26.1
@@ -287,11 +460,30 @@ urllib3==2.6.3
     # via requests
 wcwidth==0.6.0
     # via prettytable
+websocket-client==1.9.0
+    # via
+    #   ixnetwork
+    #   ixnetwork-restpy
+wheel==0.46.3
+    # via
+    #   genie-libs-clean
+    #   genie-libs-health
+    #   genie-trafficgen
 wsproto==1.3.2
     # via simple-websocket
+xlrd==1.2.0
+    # via pyats-contrib
+xlsxwriter==3.2.9
+    # via pyats-contrib
+xlwt==1.3.0
+    # via pyats-contrib
+xmltodict==1.0.4
+    # via genie-libs-parser
 yamllint==1.37.1
     # via pyats-topology
 yamlloader==1.6.0
     # via junos-eznc
+yang-connector==26.1
+    # via genie-libs-sdk
 yarl==1.22.0
     # via aiohttp
