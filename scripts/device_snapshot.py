@@ -49,4 +49,4 @@ if __name__ == "__main__":
     # If run manually, you can pass 'golden' as an argument
     # Otherwise, it defaults to a timestamp for the Cron job
     tag = datetime.now().strftime("%Y-%m-%d")
-    run_snapshot('testbed.yaml', tag)
+    run_snapshot('testbed/emis-testbed.yaml', tag)

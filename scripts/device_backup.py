@@ -57,4 +57,4 @@ def backup_network_configs(testbed_file, backup_dir='backups'):
 
 
 if __name__ == "__main__":
-    backup_network_configs('testbed.yaml')
+    backup_network_configs('testbed/emis-testbed.yaml')

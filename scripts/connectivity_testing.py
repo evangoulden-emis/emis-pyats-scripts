@@ -24,4 +24,4 @@ def check_connectivity(testbed_file):
 
 if __name__ == "__main__":
     # Ensure your testbed file is named 'testbed.yaml' or update the path below
-    check_connectivity('testbed.yaml')
+    check_connectivity('testbed/emis-testbed.yaml')
