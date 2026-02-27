@@ -1,0 +1,180 @@
+{
+  "_exclude": [],
+  "attributes": null,
+  "commands": null,
+  "connections": null,
+  "context_manager": {},
+  "info": {
+    "vlans": {
+      "1": {
+        "interfaces": [
+          "GigabitEthernet1/0/5",
+          "GigabitEthernet1/0/6",
+          "GigabitEthernet1/0/7",
+          "GigabitEthernet1/0/8",
+          "GigabitEthernet1/0/9",
+          "GigabitEthernet1/0/11",
+          "GigabitEthernet1/0/12",
+          "GigabitEthernet1/0/13",
+          "GigabitEthernet1/0/14",
+          "GigabitEthernet1/0/15",
+          "GigabitEthernet1/0/16",
+          "GigabitEthernet1/0/17",
+          "GigabitEthernet1/0/18",
+          "GigabitEthernet1/0/19",
+          "GigabitEthernet1/0/20",
+          "GigabitEthernet1/0/21",
+          "GigabitEthernet1/0/22",
+          "GigabitEthernet1/0/23",
+          "GigabitEthernet1/0/25",
+          "GigabitEthernet1/0/26",
+          "GigabitEthernet1/0/27",
+          "GigabitEthernet1/0/28",
+          "GigabitEthernet1/0/32",
+          "GigabitEthernet1/0/34",
+          "GigabitEthernet1/0/35",
+          "GigabitEthernet1/0/36",
+          "GigabitEthernet1/0/37",
+          "GigabitEthernet1/0/38",
+          "GigabitEthernet1/0/39",
+          "GigabitEthernet1/0/40",
+          "GigabitEthernet1/0/41",
+          "GigabitEthernet1/0/42",
+          "GigabitEthernet1/0/43",
+          "GigabitEthernet1/0/44",
+          "GigabitEthernet1/0/45",
+          "GigabitEthernet1/0/46",
+          "TenGigabitEthernet1/1/2",
+          "TenGigabitEthernet1/1/3",
+          "TenGigabitEthernet1/1/4",
+          "GigabitEthernet2/0/5",
+          "GigabitEthernet2/0/6",
+          "GigabitEthernet2/0/7",
+          "GigabitEthernet2/0/8",
+          "GigabitEthernet2/0/9",
+          "GigabitEthernet2/0/13",
+          "GigabitEthernet2/0/14",
+          "GigabitEthernet2/0/15",
+          "GigabitEthernet2/0/16",
+          "GigabitEthernet2/0/17",
+          "GigabitEthernet2/0/18",
+          "GigabitEthernet2/0/19",
+          "GigabitEthernet2/0/20",
+          "GigabitEthernet2/0/21",
+          "GigabitEthernet2/0/22",
+          "GigabitEthernet2/0/24",
+          "GigabitEthernet2/0/25",
+          "GigabitEthernet2/0/26",
+          "GigabitEthernet2/0/27",
+          "GigabitEthernet2/0/28",
+          "GigabitEthernet2/0/29",
+          "GigabitEthernet2/0/30",
+          "GigabitEthernet2/0/31",
+          "GigabitEthernet2/0/32",
+          "GigabitEthernet2/0/33",
+          "GigabitEthernet2/0/35",
+          "GigabitEthernet2/0/36",
+          "GigabitEthernet2/0/37",
+          "GigabitEthernet2/0/38",
+          "GigabitEthernet2/0/39",
+          "GigabitEthernet2/0/40",
+          "GigabitEthernet2/0/41",
+          "GigabitEthernet2/0/42",
+          "GigabitEthernet2/0/43",
+          "GigabitEthernet2/0/44",
+          "GigabitEthernet2/0/45",
+          "GigabitEthernet2/0/46",
+          "GigabitEthernet2/0/47",
+          "TenGigabitEthernet2/1/2",
+          "TenGigabitEthernet2/1/3",
+          "TenGigabitEthernet2/1/4"
+        ],
+        "name": "default",
+        "shutdown": false,
+        "state": "active",
+        "vlan_id": "1"
+      },
+      "1002": {
+        "name": "fddi-default",
+        "shutdown": false,
+        "state": "unsupport",
+        "vlan_id": "1002"
+      },
+      "1003": {
+        "name": "token-ring-default",
+        "shutdown": false,
+        "state": "unsupport",
+        "vlan_id": "1003"
+      },
+      "1004": {
+        "name": "fddinet-default",
+        "shutdown": false,
+        "state": "unsupport",
+        "vlan_id": "1004"
+      },
+      "1005": {
+        "name": "trnet-default",
+        "shutdown": false,
+        "state": "unsupport",
+        "vlan_id": "1005"
+      },
+      "129": {
+        "interfaces": [
+          "GigabitEthernet1/0/10",
+          "GigabitEthernet1/0/29",
+          "GigabitEthernet1/0/30",
+          "GigabitEthernet1/0/31",
+          "GigabitEthernet1/0/33",
+          "GigabitEthernet1/0/48",
+          "GigabitEthernet2/0/10",
+          "GigabitEthernet2/0/11",
+          "GigabitEthernet2/0/12",
+          "GigabitEthernet2/0/23",
+          "GigabitEthernet2/0/34",
+          "GigabitEthernet2/0/48"
+        ],
+        "name": "WIRED-DATA-CLIENT-1",
+        "shutdown": false,
+        "state": "active",
+        "vlan_id": "129"
+      },
+      "153": {
+        "interfaces": [
+          "GigabitEthernet1/0/47"
+        ],
+        "name": "VLAN0153",
+        "shutdown": false,
+        "state": "active",
+        "vlan_id": "153"
+      },
+      "333": {
+        "name": "DC-KIT-VLAN333",
+        "shutdown": false,
+        "state": "active",
+        "vlan_id": "333"
+      },
+      "500": {
+        "interfaces": [
+          "GigabitEthernet1/0/24"
+        ],
+        "name": "MERAKI-WIFI-MGT",
+        "shutdown": false,
+        "state": "active",
+        "vlan_id": "500"
+      },
+      "510": {
+        "name": "WIFI-CLIENT-OPTUM",
+        "shutdown": false,
+        "state": "active",
+        "vlan_id": "510"
+      },
+      "514": {
+        "name": "WIFI_CLIENT_TESTING",
+        "shutdown": false,
+        "state": "active",
+        "vlan_id": "514"
+      }
+    }
+  },
+  "raw_data": false
+}
