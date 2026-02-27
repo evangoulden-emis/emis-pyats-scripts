@@ -247,131 +247,131 @@ devices:
         ip: 192.168.153.237
         port: 22
 
-  # --- ISE Servers ---
-  lfmbb02-ise-000-web:
-    type: server
-    os: linux
-    connections:
-      cli:
-        protocol: https
-        ip: 192.168.147.219
-        port: 443
-
-  lfmbb02-ise-001-web:
-    type: server
-    os: linux
-    connections:
-      cli:
-        protocol: https
-        ip: 192.168.147.220
-        port: 443
-
-  lfmbb02-ise-000-cimc:
-    type: cimc
-    os: generic
-    connections:
-      cli:
-        protocol: ssh
-        ip: 192.168.147.218
-        port: 22
-
-  lfmbb02-ise-001-cimc:
-    type: cimc
-    os: generic
-    connections:
-      cli:
-        protocol: ssh
-        ip: 192.168.153.250
-        port: 22
-
-  # --- ZPA App Connectors ---
-  FG-ZPA-APPCON01:
-    type: server
-    os: linux
-    connections:
-      cli:
-        protocol: ssh
-        ip: 192.168.153.245
-        port: 22
-
-  FG-ZPA-APPCON02:
-    type: server
-    os: linux
-    connections:
-      cli:
-        protocol: ssh
-        ip: 192.168.153.246
-        port: 22
-
-  FG-ZPA-CORP:
-    type: server
-    os: linux
-    connections:
-      cli:
-        protocol: ssh
-        ip: 192.168.153.219
-        port: 22
-
-  FG-ZPA-HOSTED:
-    type: server
-    os: linux
-    connections:
-      cli:
-        protocol: ssh
-        ip: 192.168.153.217
-        port: 22
-
-  # --- Monitoring & ILO ---
-  ZABBIX:
-    type: server
-    os: linux
-    connections:
-      cli:
-        protocol: ssh
-        ip: 192.168.153.241
-        port: 22
-
-  FG-ZPA-APPCON01-ILO:
-    type: ilo
-    os: generic
-    connections:
-      cli:
-        protocol: ssh
-        ip: 192.168.153.243
-        port: 22
-
-  FG-ZPA-APPCON02-ILO:
-    type: ilo
-    os: generic
-    connections:
-      cli:
-        protocol: ssh
-        ip: 192.168.153.244
-        port: 22
-
-  FG-ZPA-CORP-ILO:
-    type: ilo
-    os: generic
-    connections:
-      cli:
-        protocol: ssh
-        ip: 192.168.153.218
-        port: 22
-
-  FG-ZPA-HOSTED-ILO:
-    type: ilo
-    os: generic
-    connections:
-      cli:
-        protocol: ssh
-        ip: 192.168.153.216
-        port: 22
-
-  ZABBIX-ILO:
-    type: ilo
-    os: generic
-    connections:
-      cli:
-        protocol: ssh
-        ip: 192.168.153.239
-        port: 22
+#  # --- ISE Servers ---
+#  lfmbb02-ise-000-web:
+#    type: server
+#    os: linux
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.147.219
+#        port: 443
+#
+#  lfmbb02-ise-001-web:
+#    type: server
+#    os: linux
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.147.220
+#        port: 443
+#
+#  lfmbb02-ise-000-cimc:
+#    type: cimc
+#    os: generic
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.147.218
+#        port: 22
+#
+#  lfmbb02-ise-001-cimc:
+#    type: cimc
+#    os: generic
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.153.250
+#        port: 22
+#
+#  # --- ZPA App Connectors ---
+#  FG-ZPA-APPCON01:
+#    type: server
+#    os: linux
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.153.245
+#        port: 22
+#
+#  FG-ZPA-APPCON02:
+#    type: server
+#    os: linux
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.153.246
+#        port: 22
+#
+#  FG-ZPA-CORP:
+#    type: server
+#    os: linux
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.153.219
+#        port: 22
+#
+#  FG-ZPA-HOSTED:
+#    type: server
+#    os: linux
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.153.217
+#        port: 22
+#
+#  # --- Monitoring & ILO ---
+#  ZABBIX:
+#    type: server
+#    os: linux
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.153.241
+#        port: 22
+#
+#  FG-ZPA-APPCON01-ILO:
+#    type: ilo
+#    os: generic
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.153.243
+#        port: 22
+#
+#  FG-ZPA-APPCON02-ILO:
+#    type: ilo
+#    os: generic
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.153.244
+#        port: 22
+#
+#  FG-ZPA-CORP-ILO:
+#    type: ilo
+#    os: generic
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.153.218
+#        port: 22
+#
+#  FG-ZPA-HOSTED-ILO:
+#    type: ilo
+#    os: generic
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.153.216
+#        port: 22
+#
+#  ZABBIX-ILO:
+#    type: ilo
+#    os: generic
+#    connections:
+#      cli:
+#        protocol: ssh
+#        ip: 192.168.153.239
+#        port: 22
