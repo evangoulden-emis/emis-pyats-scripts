@@ -5,22 +5,32 @@ def check_connectivity(testbed_file):
     testbed = loader.load('testbed.yaml')
 
     print(f"--- Starting Connectivity Check for Testbed: {testbed.name} ---")
-
+    success = list()
+    failure = list()
     for device_name, device in testbed.devices.items():
         try:
-            print(f"Connecting to {device_name}...")
+
             # Individual connection call
             device.connect()
-            print(f"Successfully connected to {device_name}")
+            success.append(device_name)
+
 
             # Optional: Run a command to verify
             # print(device.execute('show version'))
 
             device.disconnect()
         except Exception as e:
-            print(f"Failed to connect to {device_name}: {e}")
+            failure.append(device_name)
+
 
     print("--- Connectivity Check Complete ---")
+
+    for device in success:
+        print(f"�� Successfully Connected to {device}")
+
+    for device in failure:
+        print(f"❌ Failed to connect to {device}")
+
 
 if __name__ == "__main__":
     # Ensure your testbed file is named 'testbed.yaml' or update the path below
