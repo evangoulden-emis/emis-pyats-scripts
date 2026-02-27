@@ -13,10 +13,12 @@ def check_connectivity(testbed_file):
 
             # Individual connection call
             device.connect(log_stdout=False)
+            print(f"�� Successfully Connected to {device}")
             success.append(device_name)
 
             device.disconnect()
         except Exception as e:
+            print(f"❌ Failed to connect to {device}")
             failure.append(device_name)
 
     print("--- Connectivity Check Complete ---")
