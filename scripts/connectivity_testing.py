@@ -2,7 +2,7 @@ from pyats.topology import loader
 
 def check_connectivity(testbed_file):
     # Load your testbed
-    testbed = loader.load('testbed.yaml')
+    testbed = loader.load(testbed_file)
 
     print(f"--- Starting Connectivity Check for Testbed: {testbed.name} ---")
     success = list()
