@@ -1,5 +1,6 @@
 from pyats.topology import loader
 
+
 def check_connectivity(testbed_file):
     # Load your testbed
     testbed = loader.load(testbed_file)
@@ -11,17 +12,12 @@ def check_connectivity(testbed_file):
         try:
 
             # Individual connection call
-            device.connect()
+            device.connect(log_stdout=False)
             success.append(device_name)
-
-
-            # Optional: Run a command to verify
-            # print(device.execute('show version'))
 
             device.disconnect()
         except Exception as e:
             failure.append(device_name)
-
 
     print("--- Connectivity Check Complete ---")
 
