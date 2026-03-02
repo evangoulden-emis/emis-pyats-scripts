@@ -1,13 +1,16 @@
+version: "3.7"
 services:
   device_backup:
     build:
+      context: .
       dockerfile: docker/Dockerfile
     environment:
-      LOGFILE: logfile.log
+      LOGFILE: /logs/logfile.log
     networks:
       - host
     volumes:
-      - /var/network_backup_app:/app
+      - /var/network_backup_app/backups:/network_backups
+      - /var/network_backup_app/logs:/logs
 
 networks:
   host:

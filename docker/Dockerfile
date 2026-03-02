@@ -30,8 +30,10 @@ COPY --from=builder /usr/local/lib/python3.10/site-packages /usr/local/lib/pytho
 COPY --from=builder /usr/local/bin /usr/local/bin
 COPY .. .
 
-# Step 5: Ensure the backup directory exists inside the container
+# Step 5a: Ensure the backup directory exists inside the container
 RUN mkdir -p /network_backups
+# Step 5b: Create logs directory
+RUN mkdir -p /logs
 
 # Step6: Ensure that the device backup script is executable
 RUN chmod +x scripts/device_backup.py

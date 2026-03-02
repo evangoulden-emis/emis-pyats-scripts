@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 def init_system():
     if not dotenv.load_dotenv():
         print("Error loading .env file")
-        logger.fatal("Error loading .env file unable to continue.")
+        logger.fatal("Error loading .env file unable to continue; ensure that the .env file is present.")
         sys.exit(1)
     backup_network_configs(testbed_file=os.getenv('TESTBED_FILE'), backup_dir=os.getenv('BACKUP_DIR'))
 
