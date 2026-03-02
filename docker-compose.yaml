@@ -1,0 +1,17 @@
+services:
+  device_backup:
+    build:
+      dockerfile: docker/Dockerfile
+    environment:
+      LOGFILE: logfile.log
+    networks:
+      - host
+    volumes:
+      - /var/network_backup_app:/app
+
+networks:
+  host:
+    name: host
+    external: true
+
+

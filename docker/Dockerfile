@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Step 3: Set working directory and install Python dependencies
 WORKDIR /app
-COPY requirements.txt .
+COPY ../requirements.txt .
 # Install pyATS[full] and other script requirements
 RUN pip install --no-cache-dir --upgrade pip setuptools \
     && pip install --no-cache-dir -r requirements.txt
@@ -28,10 +28,13 @@ WORKDIR /app
 # Copy only the installed packages and your code from the builder
 COPY --from=builder /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
-COPY . .
+COPY .. .
 
 # Step 5: Ensure the backup directory exists inside the container
 RUN mkdir -p /var/network-backups
+
+# Step6: Ensure that the device backup script is executable
+RUN chmod +x scripts/device_backup.py
 
 # Default command to run your backup script
 CMD ["python", "scripts/device_backup.py"]

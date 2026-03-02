@@ -489,3 +489,5 @@ yarl==1.22.0
     # via aiohttp
 
 PyGithub~=2.8.1
+dotenv~=0.9.9
+python-dotenv~=1.2.2

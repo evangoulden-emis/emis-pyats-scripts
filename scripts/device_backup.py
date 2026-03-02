@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from datetime import datetime
 from github import Github
 from github import Auth
@@ -6,8 +7,10 @@ from github.InputGitTreeElement import InputGitTreeElement
 import time
 from pyats.topology import loader
 import logging
+import dotenv
+import sys
 
-log_filename = "backup_run.log"
+log_filename = os.environ.get('LOGFILE')
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(message)s',
@@ -18,9 +21,16 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+def init_system():
+    if not dotenv.load_dotenv():
+        print("Error loading .env file")
+        logger.fatal("Error loading .env file unable to continue.")
+        sys.exit(1)
+    backup_network_configs(testbed_file=os.getenv('TESTBED_FILE'), backup_dir=os.getenv('BACKUP_DIR'))
 
-def backup_network_configs(testbed_file, backup_dir: str ='/var/network-backups/'):
-    # Create backup directory with timestamp
+
+def backup_network_configs(testbed_file, backup_dir):
+    # Create a backup directory with a timestamp
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     current_backup_path = os.path.join(backup_dir, timestamp)
     os.makedirs(current_backup_path, exist_ok=True)
@@ -68,7 +78,7 @@ def backup_network_configs(testbed_file, backup_dir: str ='/var/network-backups/
 
 def push_to_github(backup_dir: str):
     # Configuration
-    ACCESS_TOKEN = os.environ.get('GH_PAT-TOKEN')
+    ACCESS_TOKEN = os.environ.get('GH_PAT_TOKEN')
     REPO_NAME = "emisgroup/network-device-backups"
     BASE_BRANCH = "main"
     NEW_BRANCH_NAME = f"backup-{int(time.time())}"
@@ -96,4 +106,4 @@ def push_to_github(backup_dir: str):
 
 
 if __name__ == "__main__":
-    backup_network_configs('testbed/emis-testbed.yaml')
+    init_system()

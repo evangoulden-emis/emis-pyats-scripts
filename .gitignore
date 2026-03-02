@@ -1,6 +1,8 @@
 # Custom
 backups/
 info/
+.env
+
 
 ### Python template
 # Byte-compiled / optimized / DLL files
