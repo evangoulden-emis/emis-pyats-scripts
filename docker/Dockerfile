@@ -31,7 +31,7 @@ COPY --from=builder /usr/local/bin /usr/local/bin
 COPY .. .
 
 # Step 5: Ensure the backup directory exists inside the container
-RUN mkdir -p /var/network-backups
+RUN mkdir -p /network_backups
 
 # Step6: Ensure that the device backup script is executable
 RUN chmod +x scripts/device_backup.py
