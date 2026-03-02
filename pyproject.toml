@@ -2,7 +2,7 @@
 name = "network-snapshot"
 version = "0.1.0"
 description = "Add your description here"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 dependencies = [
     "napalm>=5.1.0",
     "netmiko>=4.6.0",
