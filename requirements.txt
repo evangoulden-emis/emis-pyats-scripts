@@ -447,7 +447,7 @@ typing-extensions==4.15.0
     #   napalm
 tzdata==2025.3
     # via arrow
-unicon==26.1.1
+unicon
     # via
     #   network-snapshot (pyproject.toml)
     #   genie-libs-filetransferutils

@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 COPY ../requirements.txt .
 # Install pyATS[full] and other script requirements
-RUN pip install --no-cache-dir --upgrade pip setuptools \
-    && pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip setuptools
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Step 4: Final Stage - Create a clean production image
 FROM python:3.10-slim

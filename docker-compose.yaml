@@ -6,14 +6,13 @@ services:
     environment:
       LOGFILE: /logs/logfile.log
     networks:
-      - host
+      - network_app
     volumes:
       - /var/network_backup_app/backups:/network_backups
       - /var/network_backup_app/logs:/logs
 
 networks:
-  host:
-    name: host
-    external: true
+  network_app:
+    driver: bridge
 
 
