@@ -78,7 +78,7 @@ def backup_network_configs(testbed_file, backup_dir):
 
 def push_to_github(backup_dir: str):
     # Configuration
-    ACCESS_TOKEN = os.environ.get('GH_PAT_TOKEN')
+    ACCESS_TOKEN = os.getenv('GH_PAT_TOKEN')
     REPO_NAME = "emisgroup/network-device-backups"
     BASE_BRANCH = "main"
     NEW_BRANCH_NAME = f"backup-{int(time.time())}"
